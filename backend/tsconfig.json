@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "target": "ES2018",
+    "module": "commonjs",
+    "strict": true,
+    "lib": ["esnext"],
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "typeRoots": ["./types"]
+  },
+  "exclude": [
+    "dist",
+    "prisma",
+    "tests",
+    "./dist/**/*" // This is what fixed it!
+  ]
+}
