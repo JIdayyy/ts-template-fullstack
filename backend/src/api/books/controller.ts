@@ -2,7 +2,7 @@ import getAll from "./handlers/getAll";
 import delete_ from "./handlers/delete";
 
 const controller = {
-  delete_,
+  delete: delete_,
   getAll,
 };
 

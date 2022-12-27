@@ -16,6 +16,7 @@ model User {
   name      String
   password  String
   books     Book[]
+  files     File[]
 }
 
 model Book {
@@ -37,4 +38,11 @@ model Category {
   books     Book[]
 }
 
-
+model File {
+  id        String      @default(uuid()) @id
+  name      String
+  type      String
+  url       String
+  user     User     @relation(fields: [userId], references: [id])
+  userId    String
+}
