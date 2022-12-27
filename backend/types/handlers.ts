@@ -17,7 +17,7 @@ export interface Controller<T> {
     null,
     Record<any, string>
   >;
-  create: RequestHandler<null, T | ResponseError, T, Record<any, string>>;
+  create: RequestHandler<null, T | ResponseError, TCreateBody<T>>;
   update: RequestHandler<TIdParam, T | ResponseError, TUpdateBody<T>>;
   delete: RequestHandler<
     TIdParam,
